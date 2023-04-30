@@ -1,4 +1,4 @@
-package entities;
+package com.teste.cursed.entities;
 
 import java.io.Serializable;
 import java.util.Objects;
