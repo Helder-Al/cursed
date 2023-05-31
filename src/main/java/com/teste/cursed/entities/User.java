@@ -1,6 +1,8 @@
 package com.teste.cursed.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import jakarta.persistence.*;
 
@@ -17,6 +19,9 @@ public class User implements Serializable {
     private String phone;
     private String password;
 
+    @OneToMany(mappedBy = "client")
+    private List<Order> orders = new ArrayList<>();
+
     //constructor
        public User(Long id, String name, String email, String phone, String password) {
         this.id = id;
@@ -30,6 +35,11 @@ public class User implements Serializable {
     }
 
     //getters
+
+
+    public List<Order> getOrders() {
+        return orders;
+    }
 
     public long getId() {
         return id;
