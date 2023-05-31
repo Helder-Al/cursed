@@ -26,6 +26,9 @@ public class User implements Serializable {
         this.password = password;
     }
 
+    public User() {
+    }
+
     //getters
 
     public long getId() {
